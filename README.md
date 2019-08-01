@@ -64,21 +64,16 @@ The Finial perception result is shown below:
 
 # 2. Pick and Place Setup
 ## 2.1 For all three tabletop setups (`test\*.world`), perform object recognition, then read in respective pick list (`pick_list_\*.yaml`). Next construct the messages that would comprise a valid PickPlace request output them to .yaml format.
-The pick and place operation is implemented as a request-response system as shown below:
-request:
+The pick and place operation is implemented as a request-response system(service in ROS) as shown below:
 
-std_msgs/Int32 test_scene_num
+![Request_Response.PNG](image/Request_Response.PNG)
 
-std_msgs/String object_name
+The requests' details are:
 
-std_msgs/String arm_name
+![Request_Details.PNG](image/Request_Details.PNG)
 
-geometry_msgs/Pose pick_pose
+The detailed process of how to get these requests' value can be found in *pcl_callback()* function within `project_template.py`.
 
-geometry_msgs/Pose place_pose
+After getting all the messages we need and we're ready to create a `.yaml` output file by using the helper function *make_yaml_dict()*. The the according output files are `output_1.yaml`, `output_2.yaml` and `output_3.yaml` according to test_world_1, test_world_2 and test_world_3.
 
-Response
-
-bool success
-
-After identify the objects in the scene, we can calculate its centroid as the pick_pose 
+# Additional Challenges: Considering collision mapping and using the pick_place_server to execute the pick and place operation!
