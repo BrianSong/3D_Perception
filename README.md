@@ -72,8 +72,25 @@ The requests' details are:
 
 ![Request_Details.PNG](image/Request_Details.PNG)
 
-The detailed process of how to get these requests' value can be found in *pcl_callback()* function within `project_template.py`.
+The detailed process of how to get these requests' value can be found in *pcl_callback()* function within `project_template.py`. Reminder: for each pick and place operation, we should adjust the place_pose sent by a little bit so that the objects don't pile up but land side by side nice and cozy inside the box.
 
-After getting all the messages we need and we're ready to create a `.yaml` output file by using the helper function *make_yaml_dict()*. The the according output files are `output_1.yaml`, `output_2.yaml` and `output_3.yaml` according to test_world_1, test_world_2 and test_world_3.
+After getting all the messages we need and we're ready to create a `.yaml` output file by using the helper function *make_yaml_dict()*. The the according output files are `output_1.yaml`, `output_2.yaml` and `output_3.yaml` according to test1.world, test2.world and test3.world.
 
 # Additional Challenges: Considering collision mapping and using the pick_place_server to execute the pick and place operation!
+To make PR2 aware of collidable objects like the table and objects on top of it, we can publish the colliable point cloud to the topic '/pr2/3D_map/points' which the motion planning pipeline subscribe to and use it for creating a 3D collision map.
+
+Since the robot picks up objects from the table and places them in boxes on it's sides, it is important to create a 3D collision map of this particular area for collision avoidance during trajectory execution.
+
+Moreover, since the table and objects are right in front of the robot, the motion planning framework is able to create a collision map for that area. However, to represent side tables with boxes in the collision map, we must rotate the robot in place. For implement this, we introduce a state variable called *task_state* and use it to determine the current orientation of the PR2 robot and publish joint angle to '/pr2/world_joint_controller/command' for rotating the robot as shown below:
+
+![Turning.jpg](image/Turning.jpg)
+
+After the rotation, the whole 3D collision map is built as below:
+
+![Final_Collision_Map.jpg](image/Final_Collision_Map.jpg)
+
+Finially, the robots can successfully pick and place the objects into its assign boxes and we are done!
+
+![Picking_Up.jpg](image/Picking_Up.jpg)
+
+![Dropping_Down.jpg](image/Dropping_Down.jpg)
