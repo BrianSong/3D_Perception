@@ -64,3 +64,14 @@ The Finial perception result is shown below:
 
 # 2. Pick and Place Setup
 ## 2.1 For all three tabletop setups (`test\*.world`), perform object recognition, then read in respective pick list (`pick_list_\*.yaml`). Next construct the messages that would comprise a valid PickPlace request output them to .yaml format.
+The pick and place operation is implemented as a request-response system as shown below:
+# request
+std_msgs/Int32 test_scene_num
+std_msgs/String object_name
+std_msgs/String arm_name
+geometry_msgs/Pose pick_pose
+geometry_msgs/Pose place_pose
+---
+# response
+bool success
+After identify the objects in the scene, we can calculate its centroid as the pick_pose 
