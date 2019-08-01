@@ -30,7 +30,12 @@ In this project, totoally 3 fitlers are used for filtering:
 
     RGB-D cameras provide feature rich and particularly dense point clouds, meaning, more points are packed in per unit volume than, for
     example, a Lidar point cloud. Running computation on a full resolution point cloud can be slow and may not yield any improvement on
-    results obtained using a more sparsely sampled point cloud. So, Voxel Grid Downsampling is used to downsample the data.
+    results obtained using a more sparsely sampled point cloud. So, Voxel Grid Downsampling is used to downsample the data by adjust the 
+    voxel size.
 
 3. PassThrough Filter:
+
+    By using the  prior information about the location of our target in the scene, we can apply a Pass Through Filter to remove useless     data from your point cloud. By applying a Pass Through filter along z axis (the height with respect to the ground) to our tabletop   
+    scene, we can retain only the tabletop and the objects sitting on the table as below:
+    ![After_Pass_Through.PNG][image/After_Pass_Through.PNG]
     
