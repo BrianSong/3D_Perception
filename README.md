@@ -61,3 +61,6 @@ Then object recognition steps are implemented in the *pcl_callback()* function w
 The Finial perception result is shown below:
 
 ![Object_Recognition](image/Object_Recognition.jpg)
+
+# 2. Pick and Place Setup
+## 2.1 For all three tabletop setups (test\*.world), perform object recognition, then read in respective pick list (pick_list_\*.yaml). Next construct the messages that would comprise a valid PickPlace request output them to .yaml format.
