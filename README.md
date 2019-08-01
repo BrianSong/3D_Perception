@@ -52,5 +52,6 @@ Compared to k-means clustering where the number of clusters is set to be k, the 
 ![Clusters](image/Clusters.jpg)
 
 ## 1.3 Complete Exercise 3 Steps. Features extracted and SVM trained. Object recognition implemented.
+Features are extracted using *compute_color_histograms()* and *compute_normal_histograms()* functions inside `feature.py`. Also, SVM has been trained and the output: normalized confusion matrix is shown below:
 
-
+![Normalized_Matrix_Result](image/Normalized_Matrix_Result.jpg)
