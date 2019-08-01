@@ -15,7 +15,8 @@ This is a `README` that includes all the key points and how I addressed each one
 # 1. Exercise 1, 2 and 3 pipeline implemented 
 ## 1.1 Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 In this project, totoally 3 fitlers are used for filtering:
-1. Statistical Outlier Filtering: 
+1. Statistical Outlier Filtering:
+
 The given initial cloud point is filled with noise as shown below:
 
 ![Initial_Point_Cloud_with_Noise](image/Initial_Point_Cloud_with_Noise.PNG)
