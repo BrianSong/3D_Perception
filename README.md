@@ -22,7 +22,7 @@ The given initial cloud point is filled with noise as shown below:
 
 After Statistical Outlier Filtering(some parameters needed to be tweaked around for accommodating this new environment), much of the noise can be eliminated as below:
 
-[After_Statistical_Outlier_Filtering](image/After_Statistical_Outlier_Filtering.PNG)
+![After_Statistical_Outlier_Filtering](image/After_Statistical_Outlier_Filtering.PNG)
 
 2. Voxel Grid Downsampling:
 3. PassThrough Filter:
