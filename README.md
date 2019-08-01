@@ -81,7 +81,7 @@ To make PR2 aware of collidable objects like the table and objects on top of it,
 
 Since the robot picks up objects from the table and places them in boxes on it's sides, it is important to create a 3D collision map of this particular area for collision avoidance during trajectory execution.
 
-Moreover, since the table and objects are right in front of the robot, the motion planning framework is able to create a collision map for that area. However, to represent side tables with boxes in the collision map, we must rotate the robot in place. For implement this, we introduce a state variable called *task_state* and use it to determine the current orientation of the PR2 robot and publish joint angle to '/pr2/world_joint_controller/command' for rotating the robot as shown below:
+Moreover, since the table and objects are right in front of the robot, the motion planning framework is able to create a collision map for that area. However, to represent side tables with boxes in the collision map, we must rotate the robot in place. For implement this, we introduce a state variable called *task_state* and use it to determine the current orientation of the PR2 robot and publish joint angle to '/pr2/world_joint_controller/command' to rotate the robot as shown below:
 
 ![Turning.jpg](image/Turning.jpg)
 
