@@ -27,4 +27,10 @@ In this project, totoally 3 fitlers are used for filtering:
     ![After_Statistical_Outlier_Filtering](image/After_Statistical_Outlier_Filtering.PNG)
 
 2. Voxel Grid Downsampling:
+
+    RGB-D cameras provide feature rich and particularly dense point clouds, meaning, more points are packed in per unit volume than, for
+    example, a Lidar point cloud. Running computation on a full resolution point cloud can be slow and may not yield any improvement on
+    results obtained using a more sparsely sampled point cloud. So, Voxel Grid Downsampling is used to downsample the data.
+
 3. PassThrough Filter:
+    
