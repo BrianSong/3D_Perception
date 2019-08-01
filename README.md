@@ -46,4 +46,8 @@ And the **outlier** is extracted as the objects:
 
 ![Objects](image/Objects.jpg)
 
-# 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.
+## 1.2 Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.
+Compared to k-means clustering where the number of clusters is set to be k, the DBSCAN(Density-Based Spatial Clustering of Applications with Noise) clustering, also be called Euclidean Clustering is implemented in this project. The according result is shown below, each different clusters are indicated by different colors. For more details about how it is implemented, please refer to `project_template.py` line 161-169.
+![Clusters](image/Clusters.jpg)
+
+## 1.3 Complete Exercise 3 Steps. Features extracted and SVM trained. Object recognition implemented.
