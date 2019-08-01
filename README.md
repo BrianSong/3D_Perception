@@ -36,6 +36,14 @@ In this project, totoally 3 fitlers are used for filtering:
 3. PassThrough Filter:
 
     By using the  prior information about the location of our target in the scene, we can apply a Pass Through Filter to remove useless     data from your point cloud. By applying a Pass Through filter along z axis (the height with respect to the ground) to our tabletop 
-    scene, we can retain only the tabletop and the objects sitting on the table as below:
-    ![After_Pass_Through.PNG](image/After_Pass_Through.PNG)
-    
+    scene, we can retain only the tabletop and the objects sitting on the table.
+
+As for the RANSAC plane fitting - segmentation, the *make_segmenter()* function inside **Python PCL** library is implemented. After setting the model by *set_model_type()* and *set_method_type* and defining the *max_distance*(Max distance for a point to be considered fitting the model), the **inlier** is extracted as the table:
+
+![Table](image/Table.jpg)
+
+And the **outlier** is extracted as the objects:
+
+![Objects](image/Objects.jpg)
+
+# 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.
