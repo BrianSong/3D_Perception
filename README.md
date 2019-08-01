@@ -55,3 +55,9 @@ Compared to k-means clustering where the number of clusters is set to be k, the 
 Features are extracted using *compute_color_histograms()* and *compute_normal_histograms()* functions inside `feature.py`. Also, SVM has been trained and the output: normalized confusion matrix is shown below:
 
 ![Normalized_Matrix_Result](image/Normalized_Matrix_Result.jpg)
+
+Then object recognition steps are implemented in the *pcl_callback()* function within `project_template.py`. Each cluster goes through the feature extraction and those features are passed into the trained classifier for objects' type prediction.
+
+The Finial perception result is shown below:
+
+![Object_Recognition](image/Object_Recognition.jpg)
