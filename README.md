@@ -17,13 +17,13 @@ This is a `README` that includes all the key points and how I addressed each one
 In this project, totoally 3 fitlers are used for filtering:
 1. Statistical Outlier Filtering:
 
-The given initial cloud point is filled with noise as shown below:
+  The given initial cloud point is filled with noise as shown below:
 
-![Initial_Point_Cloud_with_Noise](image/Initial_Point_Cloud_with_Noise.PNG)
+  ![Initial_Point_Cloud_with_Noise](image/Initial_Point_Cloud_with_Noise.PNG)
 
-After Statistical Outlier Filtering(some parameters needed to be tweaked around for accommodating this new environment), much of the noise can be eliminated as below:
+  After Statistical Outlier Filtering(some parameters needed to be tweaked around for accommodating this new environment), much of the  noise can be eliminated as below:
 
-![After_Statistical_Outlier_Filtering](image/After_Statistical_Outlier_Filtering.PNG)
+  ![After_Statistical_Outlier_Filtering](image/After_Statistical_Outlier_Filtering.PNG)
 
 2. Voxel Grid Downsampling:
 3. PassThrough Filter:
